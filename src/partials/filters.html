@@ -1,13 +1,19 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="filters">
+
     <h3 class="filters-h3">Filters</h3>
+    <button class="reset-btn">Reset</button>
     <button class="filters-p">Search and Filters
         <svg class="svg-music" width="13" height="8">
             <use class="use-svg" href="/images/sprite-svg.svg#icon-music"></use>
         </svg>
     </button>
+
 </div>
 <div class="lupa-full">
-
 
     <div class="lupa">
         <svg class="svg-lupa" width="19" height="19">
@@ -16,26 +22,17 @@
         <input class="input-filters" type="search" placeholder="Search">
     </div>
 
-    <button class="sorting-btn">Sorting
+    <button class="sorting-btn" id="sortingBtn">Sorting
         <svg class="svg-music-rotate" width="13" height="8">
             <use class="use-svg" href="/images/sprite-svg.svg#icon-music"></use>
         </svg>
     </button>
 
-    <div class="btns">
+    <div class="btns" id="sortingDropdown">
         <button class="btn-filter-modal">Default</button>
         <button class="btn-filter-modal">A-Z</button>
         <button class="btn-filter-modal">Z-A</button>
 
-
-        <!-- <button class="btn-filter-modal">All</button>
-        <button class="btn-filter-modal">Rock</button>
-        <button class="btn-filter-modal">Pop</button>
-        <button class="btn-filter-modal">Hip-hop</button>
-        <button class="btn-filter-modal">Jazz</button>
-        <button class="btn-filter-modal">Classical</button>
-        <button class="btn-filter-modal">Electronic</button>
-        <button class="btn-filter-modal">Raggae</button> -->
     </div>
     <div class="btn-genre-full">
         <button class="btn-genre">Genre
@@ -43,6 +40,18 @@
                 <use class="use-svg" href="/images/sprite-svg.svg#icon-music"></use>
             </svg>
         </button>
+        <div class="btns" id="genreDropdown">
+
+
+            <button class="btn-filter-modal">All</button>
+            <button class="btn-filter-modal">Rock</button>
+            <button class="btn-filter-modal">Pop</button>
+            <button class="btn-filter-modal">Hip-hop</button>
+            <button class="btn-filter-modal">Jazz</button>
+            <button class="btn-filter-modal">Classical</button>
+            <button class="btn-filter-modal">Electronic</button>
+            <button class="btn-filter-modal">Raggae</button>
+        </div>
 
     </div>
 </div>
