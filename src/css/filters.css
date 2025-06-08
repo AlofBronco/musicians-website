@@ -113,8 +113,7 @@ border-radius: 12px;
     fill: #fff;
 }
 .btns{
-    position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 16px;
@@ -127,12 +126,14 @@ border-radius: 12px;
         width: 265px;
         height: 161px;
         margin-bottom: 12px;
-        right: 32px;
         background-color: #1e1c1f;
 }
+.btns.active{
+display: flex;
+}
 .btns-genre{
-    right: 32px;
-    position: absolute;
+
+  
     bottom: 100px;
 
 
@@ -150,6 +151,9 @@ border-radius: 12px;
         height: 376px;
     gap: 16px;
     background-color: #1e1c1f;
+}
+.btn-genre.active{
+    display: flex;
 }
 .btn-filter-modal {
     font-weight: 400;
