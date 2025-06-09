@@ -1,6 +1,7 @@
 btn{
     cursor: pointer;
 }
+
 .filters{
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@ border-radius: 12px;
     border-radius: 12px;
     padding: 12px;
     width: 289px;
-    height: 343px;
+    height: 100%;
     background-color: #1e1c1f;
     margin-left: 16px;
     gap: 12px;
@@ -108,10 +109,7 @@ border-radius: 12px;
             align-items: center;
             justify-content: space-between;
 }
-.svg-music-rotate{
-    transform: rotate(180deg);
-    fill: #fff;
-}
+
 .btns{
     display: none;
     flex-direction: column;
@@ -130,13 +128,10 @@ border-radius: 12px;
 }
 .btns.active{
 display: flex;
+height: 161px;
 }
 .btns-genre{
-
-  
     bottom: 100px;
-
-
     display: flex;
         flex-direction: column;
         align-items: center;
@@ -172,6 +167,48 @@ display: flex;
         align-items: center;
         justify-content: space-between;
 }
+#genreDropdown{
+    overflow: scroll;
+}
+.svg-music {
+  transition: transform 0.3s ease;
+}
+
+.btn-genre-full.active .svg-music {
+  transform: rotate(180deg);
+}
+.svg-music {
+  transition: transform 0.3s ease;
+  fill: white;
+}
+
+.btn-genre-full.active .svg-music {
+  transform: rotate(180deg);
+}
+
+
+.btns-genre {
+  display: none;
+}
+
+
+.btn-genre-full.active .btns-genre {
+  display: flex;
+}
+
+.svg-music-rotate {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+
+.sorting-btn.active .svg-music-rotate {
+  transform: rotate(180deg);
+}
+
+
 
 
 /* done mobile */
@@ -205,6 +242,9 @@ display: flex;
         height: 48px;
         margin-left: 32px;
     }
+    .btns{
+        width: 280px;
+    }
 
     .filters-p {
         max-width: 233px;
@@ -214,21 +254,30 @@ display: flex;
         .lupa-full {
         position: absolute;
         right: 32px;
+        width: 304px;
         }
         .btns{
             right: 100%;
-            width: 304px;
-                height: 376px;
+            width: 280;
+                height: 100%;
 
+        }
+        .btn-genre{
+            width: 280px;
         }
 
         .btns-genre{
-            width: 304px;
+            width: 280px;
                 height: 376px;
                 right: 100%;
                 top: 100%;
         }
+        .sorting-btn{
+    width: 280px;
+    height: 43px;
 }
+}
+
 
 @media screen and (min-width: 1280px){
   .filters-p{
@@ -288,7 +337,9 @@ width: 304px;
 .btns-genre{
     position: static;
     background-color: #060307;
+    width: 304px;
 }
+
 .input-filters,
 .sorting-btn,
 .btn-genre{
@@ -300,6 +351,9 @@ width: 304px;
 }
 .input-filters::placeholder{
     padding-left: 34px;
+}
+.btn-genre.active{
+    border-radius: 12px 12px 0 0;
 }
 
 

@@ -32,3 +32,29 @@ if(event.target.className !== "btn-filter-modal"){
 const genre = event.target.textContent; 
 console.dir(genre);
 }
+
+const btnGenre = document.querySelector('#btnDropgenre');
+const btnsGenre = document.querySelector('#genreDropdown');
+
+btnGenre.addEventListener('click', () => {
+if(btnGenre.classList.contains('active') == true){
+  btnGenre.classList.remove('active');
+}else{
+  btnGenre.classList.add('active');
+}
+})
+
+const btnSorting = document.querySelector('#sortingBtn');
+const btnsSorting = document.querySelector('#sortingDropdown');
+btnSorting.addEventListener('click',()=>{
+  if(btnsSorting.classList.contains('active') == true){
+    btnsSorting.classList.remove('active');
+  }else{
+    btnsSorting.classList.add('active');
+  }
+})
+const sortingBtn = document.getElementById('sortingBtn');
+
+sortingBtn.addEventListener('click', () => {
+  sortingBtn.classList.toggle('active');
+});
