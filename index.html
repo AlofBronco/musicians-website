@@ -19,7 +19,8 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/musicians-website/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/musicians-website/assets/index-dJ-Wkzze.css">
+    <link rel="modulepreload" crossorigin href="/musicians-website/assets/vendor-BbYF_8OW.js">
+    <link rel="stylesheet" crossorigin href="/musicians-website/assets/index-B9VZDkHK.css">
   </head>
   <body>
     header
@@ -27,7 +28,20 @@
     <main>
       hero
 
-      artists
+      <section class="section artists" id="artists">
+  <div class="container">
+    <h2 class="artists-title">Artists</h2>
+    <p class="artists-header">Explore Your New Favorite Artists</p>
+    <ul class="artists-gallery"></ul>
+    <button class="load-more-btn hidden" type="button">
+      Load More
+      <svg class="load-more-svg" width="24" height="24">
+        <use href="/musicians-website/img/sprite.svg#icon-down-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</section>
+
       about-us
       feedback
     </main>
