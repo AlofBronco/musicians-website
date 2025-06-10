@@ -1,0 +1,58 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close" data-modal-close>&times;</button>
+    <h2 class="modal-title">Submit feedback</h2>
+    <form class="modal-form">
+      <div class="modal-field">
+        <label class="modal-label" for="user-name">Name</label>
+        <div class="modal-wrap">
+          <input
+            type="text"
+            class="modal-input"
+            placeholder="Emily"
+            name="user-name"
+            id="user-name"
+          />
+          <p class="error-message" hidden>Text error</p>
+        </div>
+      </div>
+
+      <div class="modal-field-textarea">
+        <label for="user-comment" class="modal-label">Message</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="modal-textarea"
+          placeholder="Type your message..."
+          required
+        ></textarea>
+        <p class="error-message" hidden>Text error</p>
+      </div>
+
+      <div class="modal-stars" aria-label="Rating">
+        <button type="button" class="star" data-value="1" aria-label="1 star">
+          &#9733;
+        </button>
+        <button type="button" class="star" data-value="2" aria-label="2 stars">
+          &#9733;
+        </button>
+        <button type="button" class="star" data-value="3" aria-label="3 stars">
+          &#9733;
+        </button>
+        <button type="button" class="star" data-value="4" aria-label="4 stars">
+          &#9733;
+        </button>
+        <button type="button" class="star" data-value="5" aria-label="5 stars">
+          &#9733;
+        </button>
+        <input type="hidden" name="rating" id="rating-value" value="0" />
+      </div>
+
+      <button type="submit" class="modal-submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Кнопка для секції з відгуками-->
+
+<!-- <main><button id="open-modal-btn">Leave feedback</button></main> -->
