@@ -51,11 +51,11 @@ border-radius: 12px;
 .input-filters{
     border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        padding: 8px 12px;
+        padding: 8px 12px 8px 48px;
         width: 265px;
         height: 48px;
         background-color: rgba(255, 255, 255, 0);
-       
+color: white;
 }
 .lupa-full {
     display: flex;
@@ -63,11 +63,12 @@ border-radius: 12px;
     border-radius: 12px;
     padding: 12px;
     width: 289px;
-    height: 100%;
+    height: 343px;
     background-color: #1e1c1f;
     margin-left: 16px;
     gap: 12px;
 }
+
 .lupa {
     position: relative;
     width: 250px;
@@ -84,16 +85,11 @@ border-radius: 12px;
 
 }
 
-.input-filters {
-    width: 265px;
-    padding-left: 35px;
-    height: 48px;
-}
 
 .sorting-btn,
 .btn-genre{
     border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 12px 12px 0 0;
+        border-radius: 12px 12px 12px 12px;
         padding: 8px 12px;
         width: 265px;
         height: 43px;
@@ -109,6 +105,11 @@ border-radius: 12px;
             align-items: center;
             justify-content: space-between;
 }
+.sorting-btn.active,
+.btn-genre.btns.active{
+    border-radius: 12px 12px 0 0;
+}
+
 
 .btns{
     display: none;
@@ -234,6 +235,14 @@ height: 161px;
 
 /* JS */
 /* Start another displays */
+
+.lupa-full{
+    display: none;
+}
+.lupa-full.active{
+    display: flex;
+}
+
 @media screen and (min-width: 768px) {
     .filters {
         flex-direction: row;
@@ -242,9 +251,10 @@ height: 161px;
         height: 48px;
         margin-left: 32px;
     }
-    .btns{
+    .input-filters{
         width: 280px;
     }
+    
 
     .filters-p {
         max-width: 233px;
@@ -255,10 +265,11 @@ height: 161px;
         position: absolute;
         right: 32px;
         width: 304px;
+        height: 343px;
         }
         .btns{
             right: 100%;
-            width: 280;
+            width: 280px;
                 height: 100%;
 
         }
@@ -279,7 +290,7 @@ height: 161px;
 }
 
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1440px){
   .filters-p{
     display: none;
   }
@@ -349,11 +360,19 @@ width: 304px;
         width: 304px;
         height: 48px;
 }
+.input-filters{
+    padding-left: 48px;
+}
 .input-filters::placeholder{
-    padding-left: 34px;
+    padding-left: 12px;
+    color: white;
+    opacity: 60%;
 }
 .btn-genre.active{
     border-radius: 12px 12px 0 0;
+}
+.lupa-full{
+    display: flex;
 }
 
 
