@@ -6,7 +6,7 @@ import{a as b}from"./assets/vendor-BbYF_8OW.js";(function(){const e=document.cre
                 ${n?`<a class="track-link" href='${n}' target="_blank" rel="noopener noreferrer"
                   ><svg class="track-link-icon" width="24" height="24">
                     <use
-                      href="/img/sprite.svg#icon-youtube"
+                      href="./img/sprite.svg#icon-youtube"
                     ></use></svg
                 ></a>`:""} 
               </div>
