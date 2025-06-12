@@ -7,6 +7,11 @@
   background-color: rgba(156, 156, 156, 0.25);
   overflow-y: scroll;
   z-index: 9999;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   opacity: 0;
   visibility: hidden;
@@ -21,10 +26,8 @@
 
 .modal-feedback {
   margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: 100%;
   max-width: 375px;
   min-width: 320px;
   background-color: #060307;
@@ -150,8 +153,29 @@
   border: 2px solid rgb(147, 10, 10);
 }
 
-#rating-container.error {
-  outline: 2px solid red;
-  border-radius: 4px;
-  padding: 4px;
+@media screen and (min-width: 768px) {
+  .modal-feedback {
+    max-width: 704px;
+    padding: 64px 32px;
+  }
+
+  .modal-title-feedback {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 48px;
+  }
+
+  .modal-form {
+    gap: 24px;
+  }
+
+  .modal-textarea {
+    min-height: 180px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal-feedback {
+    max-width: 864px;
+  }
 }

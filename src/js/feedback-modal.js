@@ -11,7 +11,6 @@ const ratingInput = document.getElementById('rating-value'); // hidden input
 const ratingContainer = document.getElementById('rating-container');
 
 let escHandler = null;
-let ratyInstance = null;
 
 openModalBtn.addEventListener('click', openModal);
 
@@ -25,12 +24,12 @@ function openModal() {
   };
   window.addEventListener('keydown', escHandler);
 
-  // Initialize Raty
-  ratyInstance = new Raty({
-    target: '#rating-container',
-    starSize: 24,
+  const ratyInstance = new Raty(document.querySelector('#rating-container'), {
+    path: '../img/feedback-modal/',
+    starOff: 'star-off.svg',
+    starOn: 'star-on.svg',
     number: 5,
-    click: score => {
+    click: function (score) {
       ratingInput.value = score;
     },
   });
