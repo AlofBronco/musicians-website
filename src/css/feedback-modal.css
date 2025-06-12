@@ -124,7 +124,7 @@
 }
 
 .modal-textarea {
-  resize: vertical;
+  resize: none;
   min-height: 130px;
 }
 
@@ -140,6 +140,8 @@
   font-size: 18px;
   line-height: 1.5;
   color: #fff;
+  margin: 0 auto;
+  width: 288px;
   border: none;
   transition: background-color 0.1s ease-in-out;
 }
@@ -172,10 +174,18 @@
   .modal-textarea {
     min-height: 180px;
   }
+
+  .modal-submit {
+    width: 340px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .modal-feedback {
     max-width: 864px;
+  }
+
+  .modal-submit {
+    width: auto;
   }
 }
