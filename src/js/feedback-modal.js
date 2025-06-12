@@ -1,5 +1,5 @@
 import axios from 'axios';
-import 'css-star-rating/css/star-rating.min.css';
+import Raty from 'raty-js';
 
 const modalBackdrop = document.querySelector('[data-modal]');
 const openModalBtn = document.getElementById('open-modal-btn');
@@ -7,11 +7,14 @@ const closeModalBtn = modalBackdrop.querySelector('[data-modal-close]');
 const form = modalBackdrop.querySelector('.modal-form');
 const nameInput = document.getElementById('user-name');
 const textInput = document.getElementById('user-comment');
-const ratingInput = document.getElementById('rating-value');
+const ratingInput = document.getElementById('rating-value'); // hidden input
+const ratingContainer = document.getElementById('rating-container');
 
 let escHandler = null;
+let ratyInstance = null;
 
 openModalBtn.addEventListener('click', openModal);
+
 function openModal() {
   modalBackdrop.classList.add('is-open');
   modalBackdrop.classList.remove('is-hidden');
@@ -21,6 +24,16 @@ function openModal() {
     if (e.key === 'Escape') closeModal();
   };
   window.addEventListener('keydown', escHandler);
+
+  // Initialize Raty
+  ratyInstance = new Raty({
+    target: '#rating-container',
+    starSize: 24,
+    number: 5,
+    click: score => {
+      ratingInput.value = score;
+    },
+  });
 }
 
 closeModalBtn.addEventListener('click', closeModal);
@@ -33,6 +46,10 @@ function closeModal() {
   window.removeEventListener('keydown', escHandler);
   form.reset();
   clearErrors();
+
+  // Clear Raty stars and rating value
+  ratingContainer.innerHTML = '';
+  ratingInput.value = '';
 }
 
 function onBackdropClick(e) {
@@ -57,7 +74,7 @@ async function onFormSubmit(e) {
   }
 
   if (isNaN(ratingVal) || ratingVal < 1 || ratingVal > 5) {
-    markInvalid(ratingInput.closest('.modal-stars'));
+    markInvalid(ratingContainer);
     isValid = false;
   }
 
@@ -82,10 +99,9 @@ function markInvalid(input) {
 }
 
 function clearErrors() {
-  const inputs = form.querySelectorAll(
-    '.modal-input, .modal-textarea, .star-rating'
-  );
+  const inputs = form.querySelectorAll('.modal-input, .modal-textarea');
   inputs.forEach(input => {
     input.classList.remove('error');
   });
+  ratingContainer.classList.remove('error');
 }
