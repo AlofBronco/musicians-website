@@ -1,7 +1,11 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <button type="button" class="modal-close" data-modal-close>&times;</button>
-    <h2 class="modal-title">Submit feedback</h2>
+<div class="backdrop-feedback is-open" data-modal>
+  <div class="modal-feedback">
+    <button type="button" class="modal-close-feedback" data-modal-close>
+      <svg class="modal-close-icon-feedback" width="14" height="14">
+        <use href="../public/img/sprite.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+    <h2 class="modal-title-feedback">Submit feedback</h2>
     <form class="modal-form">
       <div class="modal-field">
         <label class="modal-label" for="user-name">Name</label>
@@ -9,7 +13,7 @@
           <input
             type="text"
             class="modal-input"
-            placeholder="Emily"
+            placeholder="Your name"
             name="user-name"
             id="user-name"
           />
@@ -30,29 +34,23 @@
       </div>
 
       <div class="modal-stars" aria-label="Rating">
-        <button type="button" class="star" data-value="1" aria-label="1 star">
-          &#9733;
-        </button>
-        <button type="button" class="star" data-value="2" aria-label="2 stars">
-          &#9733;
-        </button>
-        <button type="button" class="star" data-value="3" aria-label="3 stars">
-          &#9733;
-        </button>
-        <button type="button" class="star" data-value="4" aria-label="4 stars">
-          &#9733;
-        </button>
-        <button type="button" class="star" data-value="5" aria-label="5 stars">
-          &#9733;
-        </button>
-        <input type="hidden" name="rating" id="rating-value" value="0" />
+        <select
+          class="star-rating"
+          id="rating-value"
+          name="rating"
+          autocomplete="off"
+        >
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       </div>
 
       <button type="submit" class="modal-submit">Submit</button>
     </form>
   </div>
 </div>
-
-<!-- Кнопка для секції з відгуками-->
-
-<!-- <main><button id="open-modal-btn">Leave feedback</button></main> -->
+<button id="open-modal-btn">Open Feedback Modal</button>
