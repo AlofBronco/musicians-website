@@ -1,0 +1,43 @@
+<div class="backdrop-feedback is-open" data-modal>
+  <div class="modal-feedback">
+    <button type="button" class="modal-close-feedback" data-modal-close>
+      <svg class="modal-close-icon-feedback" width="14" height="14">
+        <use href="../public/img/sprite.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+    <h2 class="modal-title-feedback">Submit feedback</h2>
+    <form class="modal-form">
+      <div class="modal-field">
+        <label class="modal-label" for="user-name">Name</label>
+        <div class="modal-wrap">
+          <input
+            type="text"
+            class="modal-input"
+            placeholder="Your name"
+            name="user-name"
+            id="user-name"
+          />
+          <p class="error-message" hidden>Text error</p>
+        </div>
+      </div>
+
+      <div class="modal-field-textarea">
+        <label for="user-comment" class="modal-label">Message</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="modal-textarea"
+          placeholder="Type your message..."
+          required
+        ></textarea>
+        <p class="error-message" hidden>Text error</p>
+      </div>
+
+      <div id="rating-container"></div>
+      <input type="hidden" id="rating-value" name="rating" />
+
+      <button type="submit" class="modal-submit">Submit</button>
+    </form>
+  </div>
+</div>
+<button id="open-modal-btn">Open Feedback Modal</button>
