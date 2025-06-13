@@ -164,7 +164,7 @@
   animation: rotation 1s linear infinite;
 
   position: absolute;
-  margin-top: 64px;
+  margin-top: 24px;
 
   left: 50%;
   transform: translate(0%, -50%);
