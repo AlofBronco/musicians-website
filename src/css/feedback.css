@@ -8,7 +8,6 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 60px;
-    /* Можна спробувати зменшити це, якщо потрібно підняти ВСЮ секцію */
     padding-right: 20px;
     padding-bottom: 60px;
     padding-left: 20px;
@@ -27,7 +26,6 @@
     align-items: center;
     position: relative;
     gap: 16px;
-    /* Gap для мобільних */
 }
 
 .swiper-container {
@@ -36,7 +34,6 @@
     position: relative;
     flex-grow: 1;
     min-height: 100px;
-    /* Це мінімальна висота, autoHeight може збільшити її */
 }
 
 .swiper-slide {
@@ -60,18 +57,15 @@
     line-height: 1.4;
     margin-top: 15px;
     margin-bottom: 0;
-    /* <--- Залишаємо 0 для мобільних */
     font-style: normal;
     color: #fff;
     max-width: 90%;
 }
 
-/* ... інші стилі залишаються без змін ... */
 
 .swiper-buttons {
     position: absolute;
     top: 0;
-    /* Можете спробувати менше значення, якщо потрібно підняти вище */
     width: 100%;
     left: 0;
     right: 0;
@@ -83,7 +77,6 @@
     z-index: 20;
 }
 
-/* ... інші стилі залишаються без змін ... */
 
 /*
 * ----------------------------------------------------
@@ -100,27 +93,23 @@
 
     .feedback-section {
         gap: 0;
-        /* Вимикаємо gap для ручного контролю відступів */
         min-height: 300px;
     }
 
     .swiper-container {
         min-height: 100px;
         margin-bottom: 16px;
-        /* Задаємо відступ 16px після swiper-container */
     }
 
     .swiper-slide .text {
         font-size: 20px;
         margin-top: 20px;
         margin-bottom: 0;
-        /* <--- ЗМІНА: Встановлюємо 0, щоб не додавати зайвий простір всередині слайда */
         max-width: 440px;
     }
 
     .swiper-buttons {
         top: 30px;
-        /* <--- ЗМІНА: Спробуйте це значення. Якщо 0 не працює, можливо 40px буде оптимальним */
         padding: 0 44px;
     }
 
@@ -129,7 +118,6 @@
         padding: 0;
         margin-top: -20px;
         margin-bottom: 16px;
-        /* Задаємо відступ 16px після пагінації */
     }
 }
 
@@ -142,7 +130,6 @@
     .feedback-container {
         width: 1440px;
         padding-top: 112px;
-        /* Якщо потрібно підняти кнопки вище, зменшіть і це значення */
         padding-right: 64px;
         padding-bottom: 112px;
         padding-left: 64px;
@@ -150,13 +137,11 @@
 
     .feedback-section {
         gap: 80px;
-        /* Залишаємо gap 80px для десктопів */
         min-height: 397.89px;
     }
 
     .swiper-container {
         min-height: 100px;
-        /* На десктопі gap 80px на feedback-section контролює відстань, тому margin-bottom тут не потрібен */
     }
 
     .swiper-slide .text {
@@ -164,13 +149,11 @@
         line-height: 1.5;
         margin-top: 20px;
         margin-bottom: 0;
-        /* <--- ЗМІНА: Встановлюємо 0, щоб не додавати зайвий простір всередині слайда */
         max-width: 770px;
     }
 
     .swiper-buttons {
         top: 30px;
-        /* <--- ЗМІНА: Якщо потрібно підняти, зменшіть це значення */
         padding: 0 48px;
     }
 
