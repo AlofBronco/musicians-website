@@ -19,8 +19,9 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/musicians-website/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/musicians-website/assets/vendor-BvLu_gPC.js">
-    <link rel="stylesheet" crossorigin href="/musicians-website/assets/index-mM6QgpbU.css">
+    <link rel="modulepreload" crossorigin href="/musicians-website/assets/vendor-CJHE7mAr.js">
+    <link rel="stylesheet" crossorigin href="/musicians-website/assets/vendor-CtX7tJ2V.css">
+    <link rel="stylesheet" crossorigin href="/musicians-website/assets/index-CyCTkftw.css">
   </head>
   <body>
     <header class="header">
@@ -150,7 +151,31 @@
   </div>
 </section>
 
-      
+      <div class="feedback-container container">
+  <div class="feedback-section">
+    <div class="swiper-container">
+      <div class="swiper-wrapper" id="feedback-wrapper">
+        <div class="loader-wrapper">
+          <span class="loader"></span>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-buttons">
+      <button id="prevBtn" aria-label="Previouse feedback">
+        <svg class="icon-f icon-arrow-left" width="14" height="14">
+          <use href="./img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button id="nextBtn" aria-label="Next feedback">
+        <svg class="icon-f icon-arrow-right" width="14" height="14">
+          <use href="./img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
     </main>
 
     <footer class="footer section">
