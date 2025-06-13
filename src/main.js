@@ -4,3 +4,4 @@ import './js/feedback-modal';
 import './js/feedback'
 import './js/header-menu';
 import './js/hero.js';
+import './js/filters';
